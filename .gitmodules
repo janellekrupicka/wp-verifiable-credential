@@ -1,0 +1,3 @@
+[submodule "phpqrcode"]
+	path = phpqrcode
+	url = https://github.com/giansalex/phpqrcode.git

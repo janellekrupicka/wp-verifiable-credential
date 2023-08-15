@@ -4,7 +4,7 @@ Plugin Name: Verifiable Credential Login
 Description: Login with Verifiable Credentials.
 */
 
-include 'phpqrcode/qrlib.php';
+include 'phpqrcode/src/qrlib.php';
 include 'controller.php';
 
 // If this file was called directly, abort.
