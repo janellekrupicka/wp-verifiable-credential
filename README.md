@@ -1,7 +1,5 @@
-# Verifiable Credential Wordpress Plugin
-
-## Description
-This plugin allows users to login to Wordpress using the Hyperledger Aries Cloudagent Python verifiable credential framework. Users need to have a credential in a mobile wallet that was issued by a specific issuer DID specified in the code (see [Variables](#variables)). With a mobile wallet, users can scan a QR code on the Wordpress login page at /wp-login.php to receive a connectionless request for proof of verifiable credential. Users then submit proof of crednetial in their mobile wallet. This plugin obtains the user's name from the proof of credential and creates an account with that name or logs the user in if an account already exists.
+# Proof-of-Concept Verifiable Credential Wordpress Plugin
+This proof-of-concept plugin allows users to login to Wordpress using the Hyperledger Aries Cloudagent Python verifiable credential framework. Users need to have a credential in a mobile wallet that was issued by a specific issuer DID specified in the code (see [Variables](#variables)). With a mobile wallet, users can scan a QR code on the Wordpress login page at /wp-login.php to receive a connectionless request for proof of verifiable credential. Users then submit proof of crednetial in their mobile wallet. This plugin obtains the user's name from the proof of credential and creates an account with that name or logs the user in if an account already exists.
 
 ## Prerequisites
 
@@ -11,6 +9,8 @@ This plugin requires a Hyperledger Aries Cloudagent Python (ACA-Py) agent runnin
 In order to interact with a mobile wallet, the ACA-Py agent needs a publically addressable endpoint: see [Networking](#neworking).
 
 For more information about setting up Hyperledger ACA-Py, see [ACAPyFramework.md](ACAPyFramework.md).
+
+*This plugin has been tested with ACA-Py version 0.9.0*
 
 [Hyperledger ACA-Py Repository](https://github.com/hyperledger/aries-cloudagent-python)
 
@@ -41,7 +41,7 @@ Currently, this plugin provides the option for users to hardcode variables. See 
 This plugin can be run with [Wordpress Env](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/).
 
 ### Variables
-This plugin is still in development, so there are some variables that can be hardcoded for customization.
+This plugin is only a proof-of-concept, so there are some variables that can be hardcoded for customization.
 
 Inside controller.php:
 - Inside Controller->build_proof_req():
@@ -60,7 +60,7 @@ Inside poll.js:
 If there's an error displaying on /wp-login.php, double check that the ACA-Py agent is running and has been started with the appropriate parameters.
 
 ## Future Plans
-This plugin is a work in progress and is not yet ready for distribution. Here is a list of to-dos to improve this plugin.
+This plugin is only a proof-of-concept and is not yet ready for distribution. Here is a list of to-dos to improve this plugin.
 - Remove any variables that require hardcoding and make it possible to change them from the Wordpress admin page.
     - Make it possible to set restrictions on verifiable credentials for login from the Wordpress admin page.
 - Add issuing a verifiable credential to the site registration process.
@@ -68,3 +68,6 @@ This plugin is a work in progress and is not yet ready for distribution. Here is
 - Improve the UI for submitting a verifiable credential proof request with a QR code.
 
 ## Licensing and Credit
+This plugin is written and maintained by Janelle Krupicka, with mentorship from Maki Kato and funding from Matrix Group International. 
+
+This code is licensed under Mozilla Public License 2.0.
