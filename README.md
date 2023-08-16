@@ -60,5 +60,11 @@ Inside poll.js:
 If there's an error displaying on /wp-login.php, double check that the ACA-Py agent is running and has been started with the appropriate parameters.
 
 ## Future Plans
+This plugin is a work in progress and is not yet ready for distribution. Here is a list of to-dos to improve this plugin.
+- Remove any variables that require hardcoding and make it possible to change them from the Wordpress admin page.
+    - Make it possible to set restrictions on verifiable credentials for login from the Wordpress admin page.
+- Add issuing a verifiable credential to the site registration process.
+- Update the verifiable credential proof request to DIDComm v2.
+- Improve the UI for submitting a verifiable credential proof request with a QR code.
 
 ## Licensing and Credit
