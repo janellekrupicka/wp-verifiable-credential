@@ -17,7 +17,7 @@ For more information about setting up Hyperledger ACA-Py, see [ACAPyFramework.md
 ### Mobile Wallet
 As of August 2023, this plugin works best with (and has been tested with) the [esatus](https://esatus.com/index.html%3Fp=7663&lang=en.html) mobile wallet. BC Gov has created with some other mobile wallets that may be compatible: [Getting a Mobile Wallet](https://github.com/bcgov/issuer-kit/blob/main/docs/GettingApp.md).
 
-The user aiming to login to Wordpress with a verifiable credential must already be holding a valid verifiable credential in their mobile wallet. In order to issue a credential for development and testing purposes, use the [ACA-Py Alice Gets a Phone demo](https://github.com/hyperledger/aries-cloudagent-python/blob/main/demo/AliceGetsAPhone.md).
+The user aiming to login to Wordpress with a verifiable credential must already be holding a valid verifiable credential in their mobile wallet. In order to issue a credential for development and testing purposes, use the [ACA-Py Alice Gets a Phone demo](https://github.com/hyperledger/aries-cloudagent-python/blob/main/demo/AliceGetsAPhone.md). This will issue an Indy credential.
 
 ### Networking
 The Wordpress site and the the ACA-Py agent both need to be publically addressable for the verifiable credential proof request to work. The mobile wallet needs to be able to reach both the site and the agent.
